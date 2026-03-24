@@ -1,0 +1,10 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/stayhub
+    username: root
+    password: 'yourpassword'
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
