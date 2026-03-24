@@ -1,10 +1,11 @@
+language: ko
+
 reviews:
   auto_review: true
-  language: "ko"
 
 chat:
   auto_reply: true
-  language: "ko"
+  language: ko
 
 rules:
   - "check null safety"
