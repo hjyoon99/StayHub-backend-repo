@@ -1,0 +1,10 @@
+reviews:
+  auto_review: true
+
+code_quality:
+  enabled: true
+
+rules:
+  - "check null safety"
+  - "check transaction issues"
+  - "check naming conventions"
