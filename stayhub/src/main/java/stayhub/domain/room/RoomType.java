@@ -1,4 +1,4 @@
-package stayhub.stayhub.domain.room;
+package stayhub.domain.room;
 
 import jakarta.persistence.*;
 import lombok.Getter;

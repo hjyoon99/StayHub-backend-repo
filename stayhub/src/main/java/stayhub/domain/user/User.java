@@ -1,4 +1,4 @@
-package stayhub.stayhub.domain.user;
+package stayhub.domain.user;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
