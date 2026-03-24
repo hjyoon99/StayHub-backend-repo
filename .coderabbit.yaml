@@ -1,8 +1,10 @@
 reviews:
   auto_review: true
+  language: "ko"
 
-code_quality:
-  enabled: true
+chat:
+  auto_reply: true
+  language: "ko"
 
 rules:
   - "check null safety"
