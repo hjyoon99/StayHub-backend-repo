@@ -1,9 +1,9 @@
-package stayhub.stayhub.domain.payment;
+package stayhub.domain.payment;
 
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-import stayhub.stayhub.domain.reservation.Reservation;
+import stayhub.domain.reservation.Reservation;
 
 import java.time.LocalDateTime;
 
