@@ -1,8 +1,12 @@
 package stayhub.domain.global.exception;
 
+import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.ResponseStatus;
+
+@ResponseStatus(HttpStatus.CONFLICT)
 public class AlreadyReservedException extends RuntimeException {
 
-    public AlreadyReservedException() {
-        super("이미 예약된 날짜입니다.");
+    public AlreadyReservedException(String message) {
+        super(message);
     }
 }

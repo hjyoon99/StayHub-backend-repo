@@ -13,8 +13,8 @@ export default function () {
     const payload = JSON.stringify({
         userId: 1,
         roomId: 1,
-        checkInDate: '2025-04-01',
-        checkOutDate: '2025-04-08'
+        checkInDate: '2025-10-01',
+        checkOutDate: '2025-10-02'
     });
 
     const params = {
@@ -26,7 +26,7 @@ export default function () {
     const res = http.post(url, payload, params);
 
     check(res, {
-        'status is 200 or 500': (r) => r.status === 200 || r.status === 500,
+        'status is 200 or 409': (r) => r.status === 200 || r.status === 409,
     });
 
     sleep(0.1);

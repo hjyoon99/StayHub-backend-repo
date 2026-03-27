@@ -1,8 +1,9 @@
 package stayhub.domain.reservation;
 
-import jakarta.transaction.Transactional;
+import org.springframework.transaction.annotation.Transactional;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
+import stayhub.domain.global.exception.AlreadyReservedException;
 import stayhub.domain.reservation.dto.ReservationRequestDto;
 import stayhub.domain.reservation.dto.ReservationResponseDto;
 import stayhub.domain.reservation.slot.ReservationSlotService;
@@ -39,10 +40,7 @@ public class ReservationService {
 
         } catch (DataIntegrityViolationException e) {
 
-            // 실패 시 정리
-            reservationRepository.delete(reservation);
-
-            throw new IllegalStateException("이미 예약된 방입니다");
+            throw new AlreadyReservedException("이미 예약된 방입니다.");
         }
 
         return new ReservationResponseDto(reservation.getId(), "CONFIRMED");
